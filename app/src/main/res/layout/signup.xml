@@ -25,6 +25,8 @@
             android:layout_height="wrap_content"
             android:text="First Name"
             android:textColor="#FFFFFF"
+            android:translationX="-133dp"
+            android:translationY="-5dp"
             android:textSize="14sp" />
         <EditText
             android:layout_width="match_parent"
@@ -43,6 +45,8 @@
             android:layout_height="wrap_content"
             android:text="Middle Name"
             android:textColor="#FFFFFF"
+            android:translationX="-126dp"
+            android:translationY="-5dp"
             android:textSize="14sp" />
         <EditText
             android:layout_width="match_parent"
@@ -60,6 +64,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Last Name"
+            android:translationX="-135dp"
+            android:translationY="-5dp"
             android:textColor="#FFFFFF"
             android:textSize="14sp" />
         <EditText
@@ -78,6 +84,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Email"
+            android:translationX="-150dp"
+            android:translationY="-5dp"
             android:textColor="#FFFFFF"
             android:textSize="14sp" />
         <EditText
@@ -97,6 +105,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Password"
+            android:translationX="-135dp"
+            android:translationY="-5dp"
             android:textColor="#FFFFFF"
             android:textSize="14sp" />
         <EditText
@@ -115,6 +125,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:translationX="-109dp"
+            android:translationY="-5dp"
             android:text="Confirm Password"
             android:textColor="#FFFFFF"
             android:textSize="14sp" />
