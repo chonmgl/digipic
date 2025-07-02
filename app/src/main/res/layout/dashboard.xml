@@ -4,15 +4,12 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
-    <!-- Top Curved Background with Logo -->
-
-    <!-- Main Content Scrollable -->
+    <!-- Top Header with Logo and Notification Icon -->
     <LinearLayout
         android:id="@+id/topHeader"
         android:layout_width="match_parent"
         android:layout_height="93dp"
         android:background="@drawable/bg_gradient"
-        android:orientation="vertical"
         android:padding="16dp">
 
         <ImageView
@@ -22,8 +19,21 @@
             android:src="@drawable/digipic_logo"
             android:translationX="-15dp"
             android:translationY="-45dp" />
+
+        <ImageView
+            android:id="@+id/notificationIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Notifications"
+            android:src="@drawable/ic_notif"
+            android:translationX="200dp"
+            android:translationY="8dp" />
     </LinearLayout>
 
+    <!-- Main Content -->
     <ScrollView
         android:layout_below="@+id/topHeader"
         android:layout_above="@+id/bottomNav"
@@ -141,7 +151,6 @@
                     android:contentDescription="Challenges Card"
                     android:scaleType="centerCrop"
                     android:src="@drawable/card_challenges" />
-
             </LinearLayout>
 
             <!-- Tip of the Day -->
@@ -153,7 +162,6 @@
                 android:padding="16dp"
                 android:layout_marginTop="24dp">
 
-                <!-- Tip Header -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -162,7 +170,6 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <!-- Tip Body -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
