@@ -1,7 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
 
-</LinearLayout>
+    <!-- Curved Top Background with Logo -->
+    <LinearLayout
+        android:id="@+id/topHeader"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:orientation="vertical"
+        android:background="@drawable/curved_header_background"
+        android:paddingStart="16dp"
+        android:paddingTop="24dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/digipic_logo"
+            android:contentDescription="Logo" />
+    </LinearLayout>
+
+    <!-- Back Arrow -->
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_back_arrow"
+        android:contentDescription="Back" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Angle Shots"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="130dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#5B2C2F" />
+
+    <!-- Tab Buttons -->
+    <LinearLayout
+        android:id="@+id/tabButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/tabIllustrations"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Illustrations"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#7A3B32"
+            android:layout_marginEnd="8dp"
+            android:paddingHorizontal="20dp"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/tabVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Video"
+            android:textColor="#7A3B32"
+            android:backgroundTint="#EEEEEE"
+            android:paddingHorizontal="20dp"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Image Carousel -->
+    <LinearLayout
+        android:id="@+id/imageCarousel"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/tabButtons"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/prevButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/circle_button"
+            android:src="@drawable/ic_arrow_left"
+            android:contentDescription="Previous" />
+
+        <ImageView
+            android:id="@+id/mainImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginHorizontal="16dp"
+            android:src="@drawable/sample_medium_shot"
+            android:contentDescription="Medium Shot" />
+
+        <ImageButton
+            android:id="@+id/nextButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/circle_button"
+            android:src="@drawable/ic_arrow_right"
+            android:contentDescription="Next" />
+    </LinearLayout>
+
+    <!-- Title of the Shot -->
+    <TextView
+        android:id="@+id/shotTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium Shot"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#5B2C2F"
+        android:layout_below="@id/imageCarousel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/shotDescription"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shotTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="A shot taken from a moderate distance, commonly used in dialogue scenes to show body language and part of the background, often including multiple subjects."
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textColor="#7A3B32" />
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/bottom_nav_background">
+
+        <ImageButton
+            android:id="@+id/navHome"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_home"
+            android:background="@android:color/transparent"
+            android:contentDescription="Home" />
+
+        <ImageButton
+            android:id="@+id/navChallenges"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_challenges"
+            android:background="@android:color/transparent"
+            android:contentDescription="Challenges" />
+
+        <ImageButton
+            android:id="@+id/navGallery"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_gallery"
+            android:background="@android:color/transparent"
+            android:contentDescription="Gallery" />
+
+        <ImageButton
+            android:id="@+id/navProfile"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_profile"
+            android:background="@android:color/transparent"
+            android:contentDescription="Profile" />
+
+        <ImageButton
+            android:id="@+id/navSettings"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_settings"
+            android:background="@android:color/transparent"
+            android:contentDescription="Settings" />
+    </LinearLayout>
+
+</RelativeLayout>
