@@ -4,12 +4,14 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
+    <!-- Top Header -->
     <LinearLayout
         android:id="@+id/topHeader"
         android:layout_width="match_parent"
         android:layout_height="93dp"
         android:background="@drawable/bg_gradient"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:orientation="horizontal">
 
         <ImageView
             android:layout_width="130dp"
@@ -32,10 +34,10 @@
             android:translationY="8dp" />
     </LinearLayout>
 
-    <!-- Main Scrollable Content -->
+    <!-- Scrollable Content -->
     <ScrollView
-        android:layout_below="@+id/topHeader"
-        android:layout_above="@+id/bottomNav"
+        android:layout_below="@id/topHeader"
+        android:layout_above="@id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="24dp">
@@ -45,7 +47,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Module Title with Dropdown -->
+            <!-- Title + Dropdown -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -81,10 +83,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Available"
-                    android:background="@drawable/tab_selected"
                     android:padding="10dp"
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold"
+                    android:textColor="#666666"
                     android:layout_marginEnd="8dp" />
 
                 <TextView
@@ -99,8 +99,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Completed"
+                    android:background="@drawable/tab_selected"
                     android:padding="10dp"
-                    android:textColor="#666666" />
+                    android:textColor="#FFFFFF" />
             </LinearLayout>
 
             <!-- icopy paste na lang tong part na to kung  magdadagdag pa ng core -->
@@ -109,7 +110,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginBottom="16dp"
-                android:background="@drawable/rounded_card"
+                android:background="@drawable/rounded_tip"
                 android:padding="16dp">
 
                 <TextView
@@ -117,13 +118,13 @@
                     android:layout_height="wrap_content"
                     android:text="Core One"
                     android:textStyle="bold"
-                    android:textColor="#6B0000"
+                    android:textColor="#FFFFFF"
                     android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Starting Course"
+                    android:text="Lorem Ipsum"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="#000000"
@@ -132,8 +133,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Day 1 of 5"
-                    android:textColor="#6B0000" />
+                    android:text="Completed"
+                    android:textColor="#FFFFFF" />
 
                 <View
                     android:layout_width="match_parent"
@@ -141,97 +142,29 @@
                     android:layout_marginTop="8dp"
                     android:background="#6B0000" />
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/rounded_card"
-                android:padding="16dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Core Two"
-                    android:textStyle="bold"
-                    android:textColor="#6B0000"
-                    android:textSize="14sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Basic Photography"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#000000"
-                    android:layout_marginBottom="8dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Day 1 of 5"
-                    android:textColor="#6B0000" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="4dp"
-                    android:layout_marginTop="8dp"
-                    android:background="#6B0000" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/rounded_card"
-                android:padding="16dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Core Three"
-                    android:textStyle="bold"
-                    android:textColor="#6B0000"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Basic Photography 2"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#000000"
-                    android:layout_marginBottom="8dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Day 1 of 5"
-                    android:textColor="#6B0000" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="4dp"
-                    android:layout_marginTop="8dp"
-                    android:background="#6B0000" />
-            </LinearLayout>
 
             <!-- Duplicate this block for Core Two and Core Three -->
             <!-- ... You can repeat with different core names ... -->
         </LinearLayout>
     </ScrollView>
 
-    <!-- Bottom Navigation -->
+
+
+
+    <!-- Bottom Navigation Bar -->
     <LinearLayout
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/bottom_nav"
+        android:elevation="6dp"
         android:orientation="horizontal"
-        android:background="#F5F5F5"
         android:padding="8dp"
-        android:weightSum="5"
-        android:elevation="4dp">
+        android:weightSum="5">
 
         <ImageView
             android:layout_weight="1"
