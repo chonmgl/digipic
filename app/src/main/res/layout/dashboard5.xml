@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Top Header with Gradient and Back Button -->
+    <LinearLayout
+        android:id="@+id/topHeader"
+        android:layout_width="match_parent"
+        android:layout_height="93dp"
+        android:background="@drawable/bg_gradient"
+        android:padding="16dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="153dp"
+            android:contentDescription="Logo"
+            android:src="@drawable/digipic_logo"
+            android:translationX="-15dp"
+            android:translationY="-45dp" />
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Back"
+            android:src="@drawable/ic_back_arrow"
+            android:translationX="200dp"
+            android:translationY="8dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_below="@id/topHeader"
+        android:layout_above="@id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test Your\nKnowledge!"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#5B2C2F"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Tab Buttons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Smart Quiz"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/tab_selected"
+                    android:layout_marginEnd="8dp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Customized"
+                    android:textColor="#7A3B32"
+                    android:background="@drawable/tab_unselected" />
+            </LinearLayout>
+
+            <!-- Prompt -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select the preferred test below to practice!"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#5B2C2F"
+                android:layout_marginTop="16dp" />
+
+            <!-- Test Cards -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_light_pink"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:layout_marginEnd="8dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:src="@drawable/test_angle"
+                        android:scaleType="centerInside" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Types of Angle Shots"
+                        android:textColor="#5B2C2F"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/card_dark_brown"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:src="@drawable/test_camera"
+                        android:scaleType="centerInside" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Types of Camera Techniques"
+                        android:textColor="#FFFFFF"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Quiz Settings Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quiz Settings"
+                android:textColor="#5B2C2F"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="24dp" />
+
+            <!-- Difficulty Buttons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EASY"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:background="@drawable/tab_selected"
+                    android:layout_marginEnd="8dp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MEDIUM"
+                    android:textColor="#7A3B32"
+                    android:textSize="12sp"
+                    android:background="@drawable/tab_unselected"
+                    android:layout_marginEnd="8dp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HARD"
+                    android:textColor="#7A3B32"
+                    android:textSize="12sp"
+                    android:background="@drawable/tab_unselected" />
+            </LinearLayout>
+
+            <!-- Question Limit -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number of questions limit: 20"
+                android:textColor="#5B2C2F"
+                android:textSize="14sp"
+                android:layout_marginTop="16dp" />
+
+            <!-- +/- Buttons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="-"
+                    android:textSize="18sp"
+                    android:textColor="#7A3B32"
+                    android:background="@drawable/tab_unselected" />
+
+                <Button
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="+"
+                    android:textSize="18sp"
+                    android:textColor="#7A3B32"
+                    android:background="@drawable/tab_unselected"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Available Questions -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20 Questions / 92 possible"
+                android:textColor="#7A3B32"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp" />
+
+            <!-- Start Button -->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="START"
+                android:textStyle="bold"
+                android:textColor="#7A3B32"
+                android:background="@drawable/btn_pink_rounded"
+                android:layout_marginTop="24dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/bottom_nav"
+        android:elevation="6dp"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:weightSum="5">
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_home"
+            android:contentDescription="Home"
+            android:padding="8dp" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_challenges"
+            android:contentDescription="Challenges"
+            android:padding="8dp" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_gallery"
+            android:contentDescription="Gallery"
+            android:padding="8dp" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_profile"
+            android:contentDescription="Profile"
+            android:padding="8dp" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_settings"
+            android:contentDescription="Settings"
+            android:padding="8dp" />
+    </LinearLayout>
+</RelativeLayout>
