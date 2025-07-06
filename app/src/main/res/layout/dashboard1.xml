@@ -22,13 +22,13 @@
 
         <ImageView
             android:id="@+id/notificationIcon"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:contentDescription="Notifications"
-            android:src="@drawable/ic_notif"
+            android:src="@drawable/bckbtn"
             android:translationX="200dp"
             android:translationY="8dp" />
     </LinearLayout>
@@ -61,22 +61,21 @@
             android:id="@+id/tabIllustrations"
             android:layout_width="wrap_content"
             android:layout_height="36dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/tab_selected"
+            android:paddingHorizontal="20dp"
             android:text="Illustrations"
             android:textColor="#FFFFFF"
-            android:background="@drawable/tab_selected"
-            android:layout_marginEnd="8dp"
-            android:paddingHorizontal="20dp"
             android:textSize="12sp" />
 
         <Button
-            android:id="@+id/tabVideo"
             android:layout_width="wrap_content"
-            android:layout_height="36dp"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:layout_marginEnd="8dp"
             android:text="Video"
-            android:textColor="#7A3B32"
-            android:backgroundTint="#EEEEEE"
-            android:paddingHorizontal="20dp"
-            android:textSize="12sp" />
+            android:textColor="#666666"
+            android:background="@android:color/transparent" />
     </LinearLayout>
 
     <!-- Image Carousel -->
@@ -93,8 +92,7 @@
             android:id="@+id/prevButton"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:background="@drawable/L_btn"
-            android:src="@drawable/ic_arrow_left"
+            android:background="@drawable/lft_nxt_btn"
             android:contentDescription="Previous" />
 
         <ImageView
@@ -109,8 +107,7 @@
             android:id="@+id/nextButton"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:background="@drawable/R_btn"
-            android:src="@drawable/ic_arrow_right"
+            android:background="@drawable/rght_nxt_btn"
             android:contentDescription="Next" />
     </LinearLayout>
 

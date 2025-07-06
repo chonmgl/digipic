@@ -30,7 +30,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:contentDescription="Back"
-            android:src="@drawable/ic_back_arrow"
+            android:src="@drawable/bckbtn"
             android:translationX="200dp"
             android:translationY="8dp" />
     </LinearLayout>
@@ -50,11 +50,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Test Your\nKnowledge!"
+                android:text="Test Your Knowledge!"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:textColor="#5B2C2F"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center_horizontal" />
 
             <!-- Tab Buttons -->
             <LinearLayout
@@ -76,7 +77,7 @@
                     android:layout_height="40dp"
                     android:text="Customized"
                     android:textColor="#7A3B32"
-                    android:background="@drawable/tab_unselected" />
+                    android:background="" />
             </LinearLayout>
 
             <!-- Prompt -->
@@ -87,7 +88,9 @@
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:textColor="#5B2C2F"
-                android:layout_marginTop="16dp" />
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center_horizontal" />
+
 
             <!-- Test Cards -->
             <LinearLayout
@@ -100,7 +103,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/card_light_pink"
+                    android:background=""
                     android:orientation="vertical"
                     android:padding="12dp"
                     android:layout_marginEnd="8dp">
@@ -108,39 +111,39 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
-                        android:src="@drawable/test_angle"
+                        android:src="@drawable/cmr_tch"
                         android:scaleType="centerInside" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
                         android:text="Types of Angle Shots"
-                        android:textColor="#5B2C2F"
                         android:textAlignment="center"
-                        android:textStyle="bold"
+                        android:textColor="#5B2C2F"
                         android:textSize="12sp"
-                        android:layout_marginTop="8dp" />
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/card_dark_brown"
+                    android:background=""
                     android:orientation="vertical"
                     android:padding="12dp">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
-                        android:src="@drawable/test_camera"
+                        android:src="@drawable/cmr_tch2"
                         android:scaleType="centerInside" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Types of Camera Techniques"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#5B2C2F"
                         android:textAlignment="center"
                         android:textStyle="bold"
                         android:textSize="12sp"
@@ -149,91 +152,97 @@
             </LinearLayout>
 
             <!-- Quiz Settings Section -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Quiz Settings"
-                android:textColor="#5B2C2F"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:layout_marginTop="24dp" />
 
             <!-- Difficulty Buttons -->
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="12dp">
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="24dp">
 
-                <Button
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="EASY"
-                    android:textColor="#FFFFFF"
-                    android:textSize="12sp"
-                    android:background="@drawable/tab_selected"
-                    android:layout_marginEnd="8dp" />
+                    android:text="Quiz Settings"
+                    android:textColor="#5B2C2F"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
-                <Button
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="MEDIUM"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="EASY"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:background="@drawable/tab_selected"
+                        android:layout_marginEnd="8dp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MEDIUM"
+                        android:textColor="#7A3B32"
+                        android:textSize="12sp"
+                        android:background=""
+                        android:layout_marginEnd="8dp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HARD"
+                        android:textColor="#7A3B32"
+                        android:textSize="12sp"
+                        android:background="" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Number of questions limit: 20"
+                    android:textColor="#5B2C2F"
+                    android:textSize="14sp"
+                    android:layout_marginTop="16dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <Button
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        android:textSize="18sp"
+                        android:textColor="#7A3B32"
+                        android:background="" />
+
+                    <Button
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        android:textSize="18sp"
+                        android:textColor="#7A3B32"
+                        android:background=""
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20 Questions / 92 possible"
                     android:textColor="#7A3B32"
                     android:textSize="12sp"
-                    android:background="@drawable/tab_unselected"
-                    android:layout_marginEnd="8dp" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="HARD"
-                    android:textColor="#7A3B32"
-                    android:textSize="12sp"
-                    android:background="@drawable/tab_unselected" />
+                    android:layout_marginTop="4dp" />
             </LinearLayout>
 
-            <!-- Question Limit -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Number of questions limit: 20"
-                android:textColor="#5B2C2F"
-                android:textSize="14sp"
-                android:layout_marginTop="16dp" />
-
-            <!-- +/- Buttons -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="8dp">
-
-                <Button
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:text="-"
-                    android:textSize="18sp"
-                    android:textColor="#7A3B32"
-                    android:background="@drawable/tab_unselected" />
-
-                <Button
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:text="+"
-                    android:textSize="18sp"
-                    android:textColor="#7A3B32"
-                    android:background="@drawable/tab_unselected"
-                    android:layout_marginStart="8dp" />
-            </LinearLayout>
-
-            <!-- Available Questions -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="20 Questions / 92 possible"
-                android:textColor="#7A3B32"
-                android:textSize="12sp"
-                android:layout_marginTop="4dp" />
 
             <!-- Start Button -->
             <Button
@@ -241,8 +250,8 @@
                 android:layout_height="56dp"
                 android:text="START"
                 android:textStyle="bold"
-                android:textColor="#7A3B32"
-                android:background="@drawable/btn_pink_rounded"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/button_gradient"
                 android:layout_marginTop="24dp" />
 
         </LinearLayout>
