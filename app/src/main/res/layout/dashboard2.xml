@@ -227,11 +227,12 @@
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/bottom_nav"
+        android:elevation="6dp"
         android:orientation="horizontal"
-        android:background="#F5F5F5"
         android:padding="8dp"
-        android:weightSum="5"
-        android:elevation="4dp">
+        android:weightSum="5">
 
         <ImageView
             android:layout_weight="1"

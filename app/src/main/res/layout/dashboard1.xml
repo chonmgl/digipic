@@ -63,7 +63,7 @@
             android:layout_height="36dp"
             android:text="Illustrations"
             android:textColor="#FFFFFF"
-            android:backgroundTint="#7A3B32"
+            android:background="@drawable/tab_selected"
             android:layout_marginEnd="8dp"
             android:paddingHorizontal="20dp"
             android:textSize="12sp" />
@@ -102,7 +102,7 @@
             android:layout_width="245dp"
             android:layout_height="239dp"
             android:layout_marginHorizontal="16dp"
-            android:contentDescription="High Angle Shot"
+            android:contentDescription="Medium Shot"
             android:src="@drawable/highangle" />
 
         <ImageButton
