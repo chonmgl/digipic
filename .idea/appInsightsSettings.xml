@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.example.digipic" />
+                  <option name="mobileSdkAppId" value="1:384913677576:android:89353fa3b3f1ddb1d020bd" />
+                  <option name="projectId" value="digipic-3f694" />
+                  <option name="projectNumber" value="384913677576" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

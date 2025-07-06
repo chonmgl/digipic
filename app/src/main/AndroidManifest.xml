@@ -11,12 +11,11 @@
         android:label="DigiPic"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Digipic"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
 
         <!-- MAIN LAUNCHER ACTIVITY -->
-        <activity
-            android:name=".Login"
+        <activity android:name=".StartUp"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,11 +23,12 @@
             </intent-filter>
         </activity>
 
+
         <!-- Other Activities -->
-        <activity android:name=".DashBoard"></activity>
+        <activity android:name=".DashBoard" />
 
         <activity
-            android:name=".StartUp"
+            android:name=".Login"
             android:exported="false" />
         <activity
             android:name=".StartUp1"

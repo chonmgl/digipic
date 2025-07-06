@@ -93,7 +93,7 @@
             android:id="@+id/prevButton"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:background="@drawable/L_btn"
+            android:background="@drawable/l_btn"
             android:src="@drawable/ic_arrow_left"
             android:contentDescription="Previous" />
 
@@ -109,7 +109,7 @@
             android:id="@+id/nextButton"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:background="@drawable/R_btn"
+            android:background="@drawable/r_btn"
             android:src="@drawable/ic_arrow_right"
             android:contentDescription="Next" />
     </LinearLayout>

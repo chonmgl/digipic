@@ -2,43 +2,95 @@ package com.example.digipic
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.util.Log
+import android.view.View
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.example.digipic.R
+import com.google.firebase.auth.FirebaseAuth
 
 class Login : AppCompatActivity() {
+
+    private lateinit var etUsername: EditText
+    private lateinit var etPassword: EditText
+    private lateinit var loginButton: Button
+    private lateinit var forgotText: TextView
+    private lateinit var signupText: TextView
+    private lateinit var progressBar: ProgressBar
+    private lateinit var auth: FirebaseAuth
+
+    companion object {
+        private const val TAG = "Login"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
 
-        val usernameField = findViewById<EditText>(R.id.etUsername)
-        val passwordField = findViewById<EditText>(R.id.etPassword)
-        val loginButton = findViewById<Button>(R.id.getStartedButton)
-        val forgotText = findViewById<TextView>(R.id.tvForgot)
-        val signupText = findViewById<TextView>(R.id.tvSignup)
+        auth = FirebaseAuth.getInstance()
+
+        // Find views
+        etUsername = findViewById(R.id.etUsername)
+        etPassword = findViewById(R.id.etPassword)
+        loginButton = findViewById(R.id.getStartedButton)
+        forgotText = findViewById(R.id.tvForgot)
+        signupText = findViewById(R.id.tvSignup)
+        progressBar = ProgressBar(this).apply {
+            visibility = View.GONE
+        }
 
         loginButton.setOnClickListener {
-            val username = usernameField.text.toString()
-            val password = passwordField.text.toString()
+            val email = etUsername.text.toString().trim()
+            val password = etPassword.text.toString().trim()
 
-            // Dummy validation example
-            if (username.isEmpty() || password.isEmpty()) {
+            if (email.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
-            } else {
-                // Proceed to dashboard or next screen
-                val intent = Intent(this, DashBoard::class.java)
-                startActivity(intent)
-                finish()
+                return@setOnClickListener
             }
+
+            progressBar.visibility = View.VISIBLE
+
+            auth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this) { task ->
+                    progressBar.visibility = View.GONE
+                    if (task.isSuccessful) {
+                        Log.d(TAG, "signInWithEmail:success")
+                        Toast.makeText(this, "Login successful!", Toast.LENGTH_SHORT).show()
+
+                        val intent = Intent(this, DashBoard::class.java)
+                        startActivity(intent)
+                        finish()
+                    } else {
+                        Log.w(TAG, "signInWithEmail:failure", task.exception)
+                        Toast.makeText(this, "Authentication failed.", Toast.LENGTH_SHORT).show()
+                    }
+                }
         }
 
         forgotText.setOnClickListener {
-            Toast.makeText(this, "Forgot Password Clicked", Toast.LENGTH_SHORT).show()
-            // You can open ForgotPasswordActivity here if needed
+            val email = etUsername.text.toString().trim()
+
+            if (email.isEmpty()) {
+                Toast.makeText(this, "Please enter your email", Toast.LENGTH_SHORT).show()
+            } else {
+                progressBar.visibility = View.VISIBLE
+                auth.sendPasswordResetEmail(email)
+                    .addOnCompleteListener { task ->
+                        progressBar.visibility = View.GONE
+                        if (task.isSuccessful) {
+                            Toast.makeText(
+                                this,
+                                "Password reset email sent.",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        } else {
+                            Toast.makeText(
+                                this,
+                                "Failed to send reset email.",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+                    }
+            }
         }
 
         signupText.setOnClickListener {
