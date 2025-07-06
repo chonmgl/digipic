@@ -4,12 +4,15 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
+    <!-- Top Header -->
     <LinearLayout
         android:id="@+id/topHeader"
         android:layout_width="match_parent"
         android:layout_height="93dp"
+        android:orientation="horizontal"
         android:background="@drawable/bg_gradient"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:gravity="center_vertical">
 
         <ImageView
             android:layout_width="130dp"
@@ -17,24 +20,40 @@
             android:contentDescription="Logo"
             android:src="@drawable/digipic_logo"
             android:translationX="-15dp"
-            android:translationY="-45dp" />
+            android:translationY="0dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
         <ImageView
             android:id="@+id/notificationIcon"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:layout_alignParentEnd="true"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:contentDescription="Notifications"
-            android:src="@drawable/ic_notif"
-            android:translationX="200dp"
-            android:translationY="8dp" />
+            android:src="@drawable/ic_notif" />
     </LinearLayout>
+
+    <!-- My Course Title -->
+    <TextView
+        android:id="@+id/myCourseTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Course"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#6B0000"
+        android:layout_below="@id/topHeader"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:translationY="10dp" />
 
     <!-- Main Scrollable Content -->
     <ScrollView
-        android:layout_below="@+id/topHeader"
+        android:layout_below="@id/myCourseTitle"
         android:layout_above="@+id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -50,7 +69,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center_vertical"
+                android:gravity="center"
+                android:layout_marginTop="24dp"
                 android:layout_marginBottom="16dp">
 
                 <TextView
@@ -103,12 +123,12 @@
                     android:textColor="#666666" />
             </LinearLayout>
 
-            <!-- icopy paste na lang tong part na to kung  magdadagdag pa ng core -->
+            <!-- Core One -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="24dp"
                 android:background="@drawable/rounded_card"
                 android:padding="16dp">
 
@@ -141,11 +161,13 @@
                     android:layout_marginTop="8dp"
                     android:background="#6B0000" />
             </LinearLayout>
+
+            <!-- Core Two -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="24dp"
                 android:background="@drawable/rounded_card"
                 android:padding="16dp">
 
@@ -178,11 +200,13 @@
                     android:layout_marginTop="8dp"
                     android:background="#6B0000" />
             </LinearLayout>
+
+            <!-- Core Three -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="24dp"
                 android:background="@drawable/rounded_card"
                 android:padding="16dp">
 
@@ -215,9 +239,6 @@
                     android:layout_marginTop="8dp"
                     android:background="#6B0000" />
             </LinearLayout>
-
-            <!-- Duplicate this block for Core Two and Core Three -->
-            <!-- ... You can repeat with different core names ... -->
         </LinearLayout>
     </ScrollView>
 
@@ -227,7 +248,6 @@
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="1dp"
         android:background="@drawable/bottom_nav"
         android:elevation="6dp"
         android:orientation="horizontal"

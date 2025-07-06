@@ -9,9 +9,10 @@
         android:id="@+id/topHeader"
         android:layout_width="match_parent"
         android:layout_height="93dp"
+        android:orientation="horizontal"
         android:background="@drawable/bg_gradient"
         android:padding="16dp"
-        android:orientation="horizontal">
+        android:gravity="center_vertical">
 
         <ImageView
             android:layout_width="130dp"
@@ -19,25 +20,41 @@
             android:contentDescription="Logo"
             android:src="@drawable/digipic_logo"
             android:translationX="-15dp"
-            android:translationY="-45dp" />
+            android:translationY="0dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
         <ImageView
             android:id="@+id/notificationIcon"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:layout_alignParentEnd="true"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:contentDescription="Notifications"
-            android:src="@drawable/ic_notif"
-            android:translationX="200dp"
-            android:translationY="8dp" />
+            android:src="@drawable/ic_notif" />
     </LinearLayout>
 
-    <!-- Scrollable Content -->
-    <ScrollView
+    <!-- My Course Title -->
+    <TextView
+        android:id="@+id/myCourseTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Course"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#6B0000"
         android:layout_below="@id/topHeader"
-        android:layout_above="@id/bottomNav"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:translationY="10dp" />
+
+    <!-- Main Scrollable Content -->
+    <ScrollView
+        android:layout_below="@id/myCourseTitle"
+        android:layout_above="@+id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="24dp">
@@ -47,12 +64,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Title + Dropdown -->
+            <!-- Module Title with Dropdown -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center_vertical"
+                android:gravity="center"
+                android:layout_marginTop="24dp"
                 android:layout_marginBottom="16dp">
 
                 <TextView
@@ -83,8 +101,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Available"
+
                     android:padding="10dp"
                     android:textColor="#666666"
+                    android:textStyle="bold"
                     android:layout_marginEnd="8dp" />
 
                 <TextView
@@ -99,8 +119,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Completed"
-                    android:background="@drawable/tab_selected"
                     android:padding="10dp"
+                    android:background="@drawable/tab_selected"
                     android:textColor="#FFFFFF" />
             </LinearLayout>
 
@@ -142,24 +162,15 @@
                     android:layout_marginTop="8dp"
                     android:background="#6B0000" />
             </LinearLayout>
-
-
-
-            <!-- Duplicate this block for Core Two and Core Three -->
-            <!-- ... You can repeat with different core names ... -->
         </LinearLayout>
     </ScrollView>
 
-
-
-
-    <!-- Bottom Navigation Bar -->
+    <!-- Bottom Navigation -->
     <LinearLayout
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="1dp"
         android:background="@drawable/bottom_nav"
         android:elevation="6dp"
         android:orientation="horizontal"
