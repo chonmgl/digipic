@@ -1,7 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
 
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/topHeader"
+        android:layout_width="match_parent"
+        android:layout_height="93dp"
+        android:background="@drawable/bg_gradient"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="153dp"
+            android:contentDescription="Logo"
+            android:src="@drawable/digipic_logo"
+            android:translationX="-15dp"
+            android:translationY="-45dp" />
+
+        <ImageView
+            android:id="@+id/notificationIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Notifications"
+            android:src="@drawable/ic_notif"
+            android:translationX="200dp"
+            android:translationY="8dp" />
+    </LinearLayout>
+
+    <!-- Back Arrow -->
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Basic Photography"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="130dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#5B2C2F" />
+
+    <!-- Tab Buttons -->
+    <LinearLayout
+        android:id="@+id/tabButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/tabIllustrations"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Illustrations"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#7A3B32"
+            android:layout_marginEnd="8dp"
+            android:paddingHorizontal="20dp"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/tabVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Video"
+            android:textColor="#7A3B32"
+            android:backgroundTint="#EEEEEE"
+            android:paddingHorizontal="20dp"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Image Carousel -->
+    <LinearLayout
+        android:id="@+id/imageCarousel"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/tabButtons"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/prevButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/L_btn"
+            android:src="@drawable/ic_arrow_left"
+            android:contentDescription="Previous" />
+
+        <ImageView
+            android:id="@+id/mainImage"
+            android:layout_width="245dp"
+            android:layout_height="239dp"
+            android:layout_marginHorizontal="16dp"
+            android:contentDescription="High Angle Shot"
+            android:src="@drawable/highangle" />
+
+        <ImageButton
+            android:id="@+id/nextButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/R_btn"
+            android:src="@drawable/ic_arrow_right"
+            android:contentDescription="Next" />
+    </LinearLayout>
+
+    <!-- Title of the Shot -->
+    <TextView
+        android:id="@+id/shotTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="High Angle Shot"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#5B2C2F"
+        android:layout_below="@id/imageCarousel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/shotDescription"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shotTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="A shot taken from a high distance."
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textColor="#7A3B32" />
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/bottom_nav"
+        android:elevation="6dp"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:weightSum="5">
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_home"
+            android:contentDescription="Home"
+            android:padding="8dp" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_challenges"
+            android:contentDescription="Challenges"
+            android:padding="8dp" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_gallery"
+            android:contentDescription="Gallery"
+            android:padding="8dp" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_profile"
+            android:contentDescription="Profile"
+            android:padding="8dp" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_settings"
+            android:contentDescription="Settings"
+            android:padding="8dp" />
+    </LinearLayout>
+</RelativeLayout>

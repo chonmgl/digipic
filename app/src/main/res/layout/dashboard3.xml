@@ -4,12 +4,14 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
+    <!-- Top Header -->
     <LinearLayout
         android:id="@+id/topHeader"
         android:layout_width="match_parent"
         android:layout_height="93dp"
         android:background="@drawable/bg_gradient"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:orientation="horizontal">
 
         <ImageView
             android:layout_width="130dp"
@@ -32,10 +34,10 @@
             android:translationY="8dp" />
     </LinearLayout>
 
-    <!-- Main Scrollable Content -->
+    <!-- Scrollable Content -->
     <ScrollView
-        android:layout_below="@+id/topHeader"
-        android:layout_above="@+id/bottomNav"
+        android:layout_below="@id/topHeader"
+        android:layout_above="@id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="24dp">
@@ -45,7 +47,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Module Title with Dropdown -->
+            <!-- Title + Dropdown -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -81,18 +83,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Available"
-                    android:background="@drawable/tab_selected"
                     android:padding="10dp"
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold"
+                    android:textColor="#666666"
                     android:layout_marginEnd="8dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Upcoming"
+                    android:background="@drawable/tab_selected"
                     android:padding="10dp"
-                    android:textColor="#666666"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
                     android:layout_marginEnd="8dp" />
 
                 <TextView
@@ -115,7 +117,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Core One"
+                    android:text="Core Four"
                     android:textStyle="bold"
                     android:textColor="#6B0000"
                     android:textSize="14sp" />
@@ -123,7 +125,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Starting Course"
+                    android:text="Lorem Ipsum"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="#000000"
@@ -152,7 +154,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Core Two"
+                    android:text="Core Five"
                     android:textStyle="bold"
                     android:textColor="#6B0000"
                     android:textSize="14sp" />
@@ -160,7 +162,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Basic Photography"
+                    android:text="Lorem Ipsum"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="#000000"
@@ -189,7 +191,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Core Three"
+                    android:text="Final"
                     android:textStyle="bold"
                     android:textColor="#6B0000"
                     android:textSize="14sp" />
@@ -197,7 +199,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Basic Photography 2"
+                    android:text="Lorem Ipsum"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="#000000"
@@ -221,17 +223,21 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- Bottom Navigation -->
+
+
+
+    <!-- Bottom Navigation Bar -->
     <LinearLayout
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/bottom_nav"
+        android:elevation="6dp"
         android:orientation="horizontal"
-        android:background="#F5F5F5"
         android:padding="8dp"
-        android:weightSum="5"
-        android:elevation="4dp">
+        android:weightSum="5">
 
         <ImageView
             android:layout_weight="1"
