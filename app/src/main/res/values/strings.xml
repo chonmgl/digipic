@@ -12,5 +12,26 @@
     <string name="hint_first_name">First name</string>
     <string name="hint_middle_name">Middle name</string>
     <string name="hint_last_name">Last name</string>
-
+    <string name="logo">Logo</string>
+    <string name="back">Back</string>
+    <string name="test_your_knowledge">Test Your Knowledge!</string>
+    <string name="smart_quiz">Smart Quiz</string>
+    <string name="customized">Customized</string>
+    <string name="prompt">Select the preferred test below to practice!</string>
+    <string name="types_of_angle_shots">Types of Angle Shots</string>
+    <string name="types_of_camera_techniques">Types of Camera Techniques</string>
+    <string name="quiz_settings">Quiz Settings</string>
+    <string name="easy">EASY</string>
+    <string name="medium">MEDIUM</string>
+    <string name="hard">HARD</string>
+    <string name="question_limit">Number of questions limit: 20</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="summary">20 Questions / 92 possible</string>
+    <string name="start">START</string>
+    <string name="home">Home</string>
+    <string name="challenges">Challenges</string>
+    <string name="gallery">Gallery</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
 </resources>
