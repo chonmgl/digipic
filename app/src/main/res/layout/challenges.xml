@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
-    <!-- Top Header with Gradient and Back Button -->
+    <!-- Top Header -->
     <LinearLayout
         android:id="@+id/topHeader"
         android:layout_width="match_parent"
         android:layout_height="93dp"
         android:background="@drawable/bg_gradient"
         android:padding="16dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:baselineAligned="false">
 
         <ImageView
             android:layout_width="130dp"
@@ -26,7 +26,6 @@
             android:id="@+id/backButton"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_alignParentEnd="true"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:contentDescription="@string/back"
@@ -35,6 +34,7 @@
             android:translationY="8dp" />
     </LinearLayout>
 
+    <!-- Scrollable Content -->
     <ScrollView
         android:layout_below="@id/topHeader"
         android:layout_above="@id/bottomNav"
@@ -47,6 +47,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!-- Header -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -62,9 +63,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_gravity="center">
+                android:layout_gravity="center"
+                android:baselineAligned="false">
 
                 <Button
+                    style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
                     android:minWidth="48dp"
@@ -72,18 +75,24 @@
                     android:text="@string/smart_quiz"
                     android:textColor="#FFFFFF"
                     android:background="@drawable/tab_selected"
-                    android:layout_marginEnd="8dp" />
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center"
+                    android:textSize="14sp"/>
 
                 <Button
+                    style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
                     android:minWidth="48dp"
                     android:minHeight="48dp"
                     android:text="@string/customized"
                     android:textColor="#7A3B32"
-                    android:background="" />
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:textSize="14sp"/>
             </LinearLayout>
 
+            <!-- Prompt -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -94,12 +103,13 @@
                 android:layout_marginTop="16dp"
                 android:layout_gravity="center_horizontal" />
 
-            <!-- Test Cards -->
+            <!-- Quiz Topic Cards -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="8dp">
+                android:layout_marginTop="8dp"
+                android:baselineAligned="false">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -169,13 +179,16 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
+                <!-- Difficulty Buttons -->
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginTop="12dp">
+                    android:layout_marginTop="12dp"
+                    android:baselineAligned="false">
 
                     <Button
+                        style="?android:attr/buttonBarButtonStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="48dp"
                         android:minWidth="48dp"
@@ -184,9 +197,11 @@
                         android:textColor="#FFFFFF"
                         android:textSize="12sp"
                         android:background="@drawable/tab_selected"
-                        android:layout_marginEnd="8dp" />
+                        android:layout_marginEnd="8dp"
+                        android:gravity="center"/>
 
                     <Button
+                        style="?android:attr/buttonBarButtonStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="48dp"
                         android:minWidth="48dp"
@@ -194,10 +209,12 @@
                         android:text="@string/medium"
                         android:textColor="#7A3B32"
                         android:textSize="12sp"
-                        android:background=""
-                        android:layout_marginEnd="8dp" />
+                        android:background="@android:color/transparent"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="center"/>
 
                     <Button
+                        style="?android:attr/buttonBarButtonStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="48dp"
                         android:minWidth="48dp"
@@ -205,9 +222,11 @@
                         android:text="@string/hard"
                         android:textColor="#7A3B32"
                         android:textSize="12sp"
-                        android:background="" />
+                        android:background="@android:color/transparent"
+                        android:gravity="center"/>
                 </LinearLayout>
 
+                <!-- Question Limit -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -220,24 +239,29 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginTop="8dp">
+                    android:layout_marginTop="8dp"
+                    android:baselineAligned="false">
 
                     <Button
+                        style="?android:attr/buttonBarButtonStyle"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:text="@string/minus"
                         android:textSize="18sp"
                         android:textColor="#7A3B32"
-                        android:background="" />
+                        android:background="@android:color/transparent"
+                        android:gravity="center"/>
 
                     <Button
+                        style="?android:attr/buttonBarButtonStyle"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:text="@string/plus"
                         android:textSize="18sp"
                         android:textColor="#7A3B32"
-                        android:background=""
-                        android:layout_marginStart="8dp" />
+                        android:background="@android:color/transparent"
+                        android:layout_marginStart="8dp"
+                        android:gravity="center"/>
                 </LinearLayout>
 
                 <TextView
@@ -257,7 +281,9 @@
                 android:textStyle="bold"
                 android:textColor="#FFFFFF"
                 android:background="@drawable/button_gradient"
-                android:layout_marginTop="24dp" />
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:textSize="16sp" />
         </LinearLayout>
     </ScrollView>
 

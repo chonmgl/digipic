@@ -99,5 +99,6 @@
         android:text="Continue"
         android:textColor="#fafdd6"
         android:textSize="14sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:gravity="center" />
 </LinearLayout>
