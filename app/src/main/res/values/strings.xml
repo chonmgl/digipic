@@ -55,5 +55,19 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="are_you_sure">Are you sure?</string>
+    <string name="email_verification">EMAIL\nVERIFICATION</string>
+    <string name="email_verification_subtitle">Provide your account’s email for which you want\n to reset your password!</string>
+    <string name="mail_icon">Mail Icon</string>
+    <string name="via_mail">via mail:</string>
+    <string name="support_email">support@gmail.com</string>
+    <string name="next">Next</string>
+    <string name="back_to_login">Back to Login</string>
+    <string name="forgot_password_title">FORGET\nPASSWORD</string>
+    <string name="forgot_password_subtitle">Provide your account’s email for which you want\n to reset your password!</string>
+    <string name="email_address">Email Address</string>
+    <string name="enter_email">Enter your email</string>
+    <string name="next">Next</string>
+    <string name="back_to_login">Back to Login</string>
+
 
 </resources>
