@@ -201,10 +201,11 @@
 
             <!-- Logout Button -->
             <Button
+                android:id="@+id/logoutButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"
-                android:text="Log out"
+                android:text="@string/log_out"
                 android:textColor="#FFFFFF"
                 android:background="@drawable/button_gradient"
                 android:layout_marginTop="32dp"

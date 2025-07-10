@@ -34,4 +34,26 @@
     <string name="gallery">Gallery</string>
     <string name="profile">Profile</string>
     <string name="settings">Settings</string>
+    <string name="log_out">Log out</string>
+    <string name="general">General</string>
+    <string name="notification">Notification</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="sounds">Sounds</string>
+    <string name="music">Music</string>
+    <string name="feedback">Feedback</string>
+    <string name="report_a_bug">Report a bug</string>
+    <string name="send_feedback">Send Feedback</string>
+    <string name="faq">FAQ</string>
+    <string name="email">Email</string>
+    <string name="first_name">First name</string>
+    <string name="middle_name">Middle name</string>
+    <string name="last_name">Last name</string>
+    <string name="update">Update</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="are_you_sure">Are you sure?</string>
+
 </resources>
