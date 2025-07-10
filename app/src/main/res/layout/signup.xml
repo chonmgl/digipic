@@ -160,15 +160,37 @@
             android:textSize="16sp"
             android:layout_marginBottom="16dp" />
 
-        <!-- Link to Login -->
-        <TextView
-            android:id="@+id/tvAlreadyHaveAccount"
+        <!-- Already have account? Log in -->
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Already have an account? Log in"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp"
+            android:orientation="horizontal"
             android:layout_gravity="center_horizontal"
-            android:textStyle="italic|bold" />
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/tvAlreadyHaveAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account?"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/tvLoginClickable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:minWidth="48dp"
+                android:text="Log in"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingStart="6dp"
+                android:gravity="center_vertical"  />
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>

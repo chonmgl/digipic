@@ -139,7 +139,7 @@
                     android:background="@android:color/transparent"
                     android:contentDescription="Photography Card"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/card_photography" />
+                    android:src="@drawable/cmr_tch3" />
 
                 <ImageButton
                     android:id="@+id/btnChallenges"
@@ -150,7 +150,7 @@
                     android:background="@android:color/transparent"
                     android:contentDescription="Challenges Card"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/card_challenges" />
+                    android:src="@drawable/cmr_tch4" />
             </LinearLayout>
 
             <!-- Tip of the Day -->
