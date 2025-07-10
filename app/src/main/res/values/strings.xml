@@ -56,7 +56,7 @@
     <string name="no">No</string>
     <string name="are_you_sure">Are you sure?</string>
     <string name="email_verification">EMAIL\nVERIFICATION</string>
-    <string name="email_verification_subtitle">Provide your account’s email for which you want\n to reset your password!</string>
+    <string name="email_verification_subtitle">Please check your Email address\n to verify password reset</string>
     <string name="mail_icon">Mail Icon</string>
     <string name="via_mail">via mail:</string>
     <string name="support_email">support@gmail.com</string>
