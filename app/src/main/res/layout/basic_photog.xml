@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
+    <!-- Header -->
     <LinearLayout
         android:id="@+id/topHeader"
         android:layout_width="match_parent"
@@ -33,112 +34,127 @@
             android:translationY="8dp" />
     </LinearLayout>
 
-    <!-- Back Arrow -->
-
-    <!-- Title -->
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Basic Photography"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginTop="130dp"
-        android:layout_centerHorizontal="true"
-        android:textColor="#5B2C2F" />
-
-    <!-- Tab Buttons -->
-    <LinearLayout
-        android:id="@+id/tabButtons"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/title"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/tabIllustrations"
-            android:layout_width="wrap_content"
-            android:layout_height="36dp"
-            android:text="Illustrations"
-            android:textColor="#FFFFFF"
-            android:background="@drawable/tab_selected"
-            android:layout_marginEnd="8dp"
-            android:paddingHorizontal="20dp"
-            android:textSize="12sp" />
-
-        <Button
-            android:id="@+id/tabVideo"
-            android:layout_width="wrap_content"
-            android:layout_height="36dp"
-            android:text="Video"
-            android:textColor="#7A3B32"
-            android:backgroundTint="#EEEEEE"
-            android:paddingHorizontal="20dp"
-            android:textSize="12sp" />
-    </LinearLayout>
-
-    <!-- Image Carousel -->
-    <LinearLayout
-        android:id="@+id/imageCarousel"
+    <!-- Main Content -->
+    <ScrollView
+        android:layout_below="@+id/topHeader"
+        android:layout_above="@+id/bottomNav"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_below="@id/tabButtons"
-        android:layout_marginTop="24dp"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-        <ImageButton
-            android:id="@+id/prevButton"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:background="@drawable/l_btn"
-            android:src="@drawable/ic_arrow_left"
-            android:contentDescription="Previous" />
-
-        <ImageView
-            android:id="@+id/mainImage"
-            android:layout_width="245dp"
-            android:layout_height="239dp"
-            android:layout_marginHorizontal="16dp"
-            android:contentDescription="Medium Shot"
-            android:src="@drawable/highangle" />
-
-        <ImageButton
-            android:id="@+id/nextButton"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:background="@drawable/r_btn"
-            android:src="@drawable/ic_arrow_right"
-            android:contentDescription="Next" />
-    </LinearLayout>
-
-    <!-- Title of the Shot -->
-    <TextView
-        android:id="@+id/shotTitle"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="High Angle Shot"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        android:textColor="#5B2C2F"
-        android:layout_below="@id/imageCarousel"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp" />
+        android:padding="24dp">
 
-    <!-- Description -->
-    <TextView
-        android:id="@+id/shotDescription"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/shotTitle"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
-        android:text="A shot taken from a high distance."
-        android:textAlignment="center"
-        android:textSize="14sp"
-        android:textColor="#7A3B32" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/basic_photography"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#5B2C2F"
+                android:layout_marginTop="16dp" />
+
+            <!-- Tabs -->
+            <LinearLayout
+                android:id="@+id/tabButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/tabIllustrations"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:text="@string/illustrations"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/tab_selected"
+                    android:layout_marginEnd="8dp"
+                    android:paddingHorizontal="20dp"
+                    android:textSize="12sp"
+                    android:gravity="center" />
+
+                <Button
+                    android:id="@+id/tabVideo"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:text="@string/video"
+                    android:textColor="#7A3B32"
+                    android:backgroundTint="#EEEEEE"
+                    android:paddingHorizontal="20dp"
+                    android:textSize="12sp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <!-- Image Carousel -->
+            <LinearLayout
+                android:id="@+id/imageCarousel"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/prevButton"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/l_btn"
+                    android:src="@drawable/lft_nxt_btn"
+                    android:contentDescription="@string/previous" />
+
+                <ImageView
+                    android:id="@+id/mainImage"
+                    android:layout_width="245dp"
+                    android:layout_height="239dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:src="@drawable/highangle"
+                    android:contentDescription="@string/medium_shot" />
+
+                <ImageButton
+                    android:id="@+id/nextButton"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/r_btn"
+                    android:src="@drawable/rght_nxt_btn"
+                    android:contentDescription="@string/next" />
+            </LinearLayout>
+
+            <!-- Shot Title -->
+            <TextView
+                android:id="@+id/shotTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/high_angle_shot"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#5B2C2F"
+                android:layout_marginTop="16dp" />
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/shotDescription"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="@string/high_angle_description"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textColor="#7A3B32"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </ScrollView>
 
     <!-- Bottom Navigation -->
     <LinearLayout
@@ -146,7 +162,6 @@
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="1dp"
         android:background="@drawable/bottom_nav"
         android:elevation="6dp"
         android:orientation="horizontal"
@@ -158,7 +173,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_home"
-            android:contentDescription="Home"
+            android:contentDescription="@string/home"
             android:padding="8dp" />
 
         <ImageView
@@ -166,7 +181,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_challenges"
-            android:contentDescription="Challenges"
+            android:contentDescription="@string/challenges"
             android:padding="8dp" />
 
         <ImageView
@@ -174,7 +189,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_gallery"
-            android:contentDescription="Gallery"
+            android:contentDescription="@string/gallery"
             android:padding="8dp" />
 
         <ImageView
@@ -182,7 +197,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_profile"
-            android:contentDescription="Profile"
+            android:contentDescription="@string/profile"
             android:padding="8dp" />
 
         <ImageView
@@ -190,7 +205,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_settings"
-            android:contentDescription="Settings"
+            android:contentDescription="@string/settings"
             android:padding="8dp" />
     </LinearLayout>
 </RelativeLayout>

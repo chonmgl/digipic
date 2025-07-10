@@ -154,7 +154,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Day 1 of 5"
-                    android:textColor="#6B0000" />
+                    android:textColor="#6B0000"
+                    android:textSize="12sp" />
 
                 <View
                     android:layout_width="match_parent"
@@ -193,7 +194,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Day 1 of 5"
-                    android:textColor="#6B0000" />
+                    android:textColor="#6B0000"
+                    android:textSize="12sp" />
 
                 <View
                     android:layout_width="match_parent"
@@ -232,7 +234,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Day 1 of 5"
-                    android:textColor="#6B0000" />
+                    android:textColor="#6B0000"
+                    android:textSize="12sp" />
 
                 <View
                     android:layout_width="match_parent"

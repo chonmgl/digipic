@@ -66,14 +66,26 @@
     <string name="forgot_password_subtitle">Provide your account’s email for which you want\n to reset your password!</string>
     <string name="email_address">Email Address</string>
     <string name="enter_email">Enter your email</string>
-    <string name="next">Next</string>
-    <string name="back_to_login">Back to Login</string>
     <string name="new_password_title">New Password</string>
     <string name="new_password_subtitle">Verification Complete\nPlease set your new password.</string>
     <string name="new_password">New Password</string>
     <string name="enter_new_password">Enter your new password</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="reenter_password">Re-enter your new password</string>
+    <string name="notifications">Notification</string>
+    <string name="account">Account</string>
+    <string name="report_bug">Report Bug</string>
+
+    <string name="basic_photography">Basic Photography</string>
+    <string name="illustrations">Illustrations</string>
+    <string name="video">Video</string>
+    <string name="previous">Previous</string>
+
+    <string name="medium_shot">Medium Shot</string>
+    <string name="high_angle_shot">High Angle Shot</string>
+    <string name="high_angle_description">A shot taken from a high distance.</string>
+
+
 
 
 </resources>
