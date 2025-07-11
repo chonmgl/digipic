@@ -129,6 +129,14 @@
     <string name="play_video">Play Video</string>
 
 
+    <string name="photography_challenges">Photography Challenges</string>
+    <string name="difficulty_levels">Difficulty Levels</string>
+    <string name="beginner">Beginner</string>
+    <string name="intermediate">Intermediate</string>
+    <string name="advance">Advance</string>
+    <string name="available_challenges">Available Challenges</string>
+    <string name="sample_challenge">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="camera_icon">Camera icon</string>
 
 
 </resources>
