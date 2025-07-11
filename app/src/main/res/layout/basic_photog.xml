@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="93dp"
         android:background="@drawable/bg_gradient"
-        android:padding="16dp"
+        android:paddingHorizontal="16dp"
         android:orientation="horizontal"
         android:gravity="center_vertical">
 
@@ -19,8 +19,12 @@
             android:layout_height="153dp"
             android:contentDescription="@string/logo"
             android:src="@drawable/digipic_logo"
-            android:translationX="-15dp"
-            android:translationY="-45dp" />
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="-30dp"
+            android:layout_marginBottom="-30dp"
+            android:translationX="-15dp" />
+
 
         <View
             android:layout_width="0dp"
@@ -29,18 +33,19 @@
 
         <ImageView
             android:id="@+id/notificationIcon"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="8dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginEnd="8dp"
             android:contentDescription="@string/notifications"
-            android:src="@drawable/ic_notif" />
+            android:src="@drawable/ic_notif"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true" />
     </LinearLayout>
 
     <!-- Main Content -->
     <ScrollView
-        android:layout_below="@+id/topHeader"
-        android:layout_above="@+id/bottomNav"
+        android:layout_below="@id/topHeader"
+        android:layout_above="@id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="24dp">
@@ -51,7 +56,6 @@
             android:orientation="vertical"
             android:gravity="center_horizontal">
 
-            <!-- Title -->
             <TextView
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
@@ -62,7 +66,6 @@
                 android:textColor="#5B2C2F"
                 android:layout_marginTop="16dp" />
 
-            <!-- Tabs -->
             <LinearLayout
                 android:id="@+id/tabButtons"
                 android:layout_width="wrap_content"
@@ -73,11 +76,9 @@
 
                 <Button
                     android:id="@+id/tabIllustrations"
-                    style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
                     android:minWidth="64dp"
-                    android:minHeight="48dp"
                     android:text="@string/illustrations"
                     android:textColor="#FFFFFF"
                     android:background="@drawable/tab_selected"
@@ -88,11 +89,9 @@
 
                 <Button
                     android:id="@+id/tabVideo"
-                    style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
                     android:minWidth="64dp"
-                    android:minHeight="48dp"
                     android:text="@string/video"
                     android:textColor="#7A3B32"
                     android:backgroundTint="#EEEEEE"
@@ -101,7 +100,6 @@
                     android:gravity="center" />
             </LinearLayout>
 
-            <!-- Image Carousel -->
             <LinearLayout
                 android:id="@+id/imageCarousel"
                 android:layout_width="match_parent"
@@ -110,13 +108,17 @@
                 android:orientation="horizontal"
                 android:gravity="center">
 
+                <!-- Left Button -->
                 <ImageButton
                     android:id="@+id/prevButton"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@drawable/l_btn"
                     android:src="@drawable/lft_nxt_btn"
-                    android:contentDescription="@string/previous" />
+                    android:contentDescription="@string/previous"
+                    android:scaleType="centerInside"
+                    android:padding="0dp"
+                    android:layout_marginEnd="12dp" />
 
                 <ImageView
                     android:id="@+id/mainImage"
@@ -124,7 +126,9 @@
                     android:layout_height="239dp"
                     android:layout_marginHorizontal="16dp"
                     android:src="@drawable/highangle"
-                    android:contentDescription="@string/medium_shot" />
+                    android:contentDescription="@string/medium_shot"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true" />
 
                 <ImageButton
                     android:id="@+id/nextButton"
@@ -132,10 +136,12 @@
                     android:layout_height="64dp"
                     android:background="@drawable/r_btn"
                     android:src="@drawable/rght_nxt_btn"
-                    android:contentDescription="@string/next" />
+                    android:contentDescription="@string/next"
+                    android:scaleType="centerInside"
+                    android:padding="0dp"
+                    android:layout_marginStart="12dp" />
             </LinearLayout>
 
-            <!-- Shot Title -->
             <TextView
                 android:id="@+id/shotTitle"
                 android:layout_width="wrap_content"
@@ -146,7 +152,6 @@
                 android:textColor="#5B2C2F"
                 android:layout_marginTop="16dp" />
 
-            <!-- Description -->
             <TextView
                 android:id="@+id/shotDescription"
                 android:layout_width="300dp"
@@ -177,6 +182,7 @@
             android:layout_height="match_parent"
             android:src="@drawable/ic_home"
             android:contentDescription="@string/home"
+            android:scaleType="centerInside"
             android:padding="8dp" />
 
         <ImageView
@@ -185,6 +191,7 @@
             android:layout_height="match_parent"
             android:src="@drawable/ic_challenges"
             android:contentDescription="@string/challenges"
+            android:scaleType="centerInside"
             android:padding="8dp" />
 
         <ImageView
@@ -193,6 +200,7 @@
             android:layout_height="match_parent"
             android:src="@drawable/ic_gallery"
             android:contentDescription="@string/gallery"
+            android:scaleType="centerInside"
             android:padding="8dp" />
 
         <ImageView
@@ -201,6 +209,7 @@
             android:layout_height="match_parent"
             android:src="@drawable/ic_profile"
             android:contentDescription="@string/profile"
+            android:scaleType="centerInside"
             android:padding="8dp" />
 
         <ImageView
@@ -209,6 +218,7 @@
             android:layout_height="match_parent"
             android:src="@drawable/ic_settings"
             android:contentDescription="@string/settings"
+            android:scaleType="centerInside"
             android:padding="8dp" />
     </LinearLayout>
 </RelativeLayout>
