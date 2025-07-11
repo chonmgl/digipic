@@ -16,7 +16,7 @@
         <ImageView
             android:layout_width="130dp"
             android:layout_height="153dp"
-            android:contentDescription="Logo"
+            android:contentDescription="@string/logo"
             android:src="@drawable/digipic_logo"
             android:translationX="-15dp"
             android:translationY="0dp" />
@@ -32,16 +32,15 @@
             android:layout_height="32dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:contentDescription="Notifications"
+            android:contentDescription="@string/notifications"
             android:src="@drawable/ic_notif" />
     </LinearLayout>
 
-    <!-- My Course Title -->
     <TextView
         android:id="@+id/myCourseTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="My Course"
+        android:text="@string/my_course"
         android:textSize="28sp"
         android:textStyle="bold"
         android:textColor="#6B0000"
@@ -50,7 +49,6 @@
         android:layout_marginTop="12dp"
         android:translationY="10dp" />
 
-    <!-- Main Scrollable Content -->
     <ScrollView
         android:layout_below="@id/myCourseTitle"
         android:layout_above="@+id/bottomNav"
@@ -75,7 +73,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Basic Photography"
+                    android:text="@string/basic_photography"
                     android:textStyle="bold"
                     android:textSize="20sp"
                     android:textColor="#6B0000" />
@@ -85,7 +83,7 @@
                     android:layout_height="20dp"
                     android:layout_marginStart="8dp"
                     android:src="@drawable/ic_dropdown"
-                    android:contentDescription="Dropdown" />
+                    android:contentDescription="@string/dropdown" />
             </LinearLayout>
 
             <!-- Tabs -->
@@ -99,31 +97,30 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Available"
+                    android:text="@string/available"
                     android:padding="10dp"
                     android:textColor="#666666"
                     android:layout_marginEnd="8dp"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Upcoming"
+                    android:text="@string/upcoming"
                     android:padding="10dp"
                     android:textColor="#666666"
                     android:layout_marginEnd="8dp"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Completed"
+                    android:text="@string/completed"
                     android:padding="10dp"
                     android:background="@drawable/tab_selected"
                     android:textColor="#FFFFFF"
-                    android:textSize="12sp"/>
+                    android:textSize="12sp" />
             </LinearLayout>
-
 
             <!-- Empty State -->
             <ImageView
@@ -132,10 +129,9 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="40dp"
-                android:contentDescription="Empty State"
+                android:contentDescription="@string/empty_state"
                 android:src="@drawable/ic_empty"
-                android:scaleType="fitCenter"
-               />
+                android:scaleType="fitCenter" />
 
             <TextView
                 android:id="@+id/emptyTitle"
@@ -143,7 +139,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="16dp"
-                android:text="No Content Available"
+                android:text="@string/no_content_available"
                 android:textColor="#757575"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -154,10 +150,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="8dp"
-                android:text="Looks like there's nothing here yet."
+                android:text="@string/nothing_here"
                 android:textColor="#9E9E9E"
                 android:textSize="14sp" />
-
         </LinearLayout>
     </ScrollView>
 
@@ -178,7 +173,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_home"
-            android:contentDescription="Home"
+            android:contentDescription="@string/home"
             android:padding="8dp" />
 
         <ImageView
@@ -186,7 +181,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_challenges"
-            android:contentDescription="Challenges"
+            android:contentDescription="@string/challenges"
             android:padding="8dp" />
 
         <ImageView
@@ -194,7 +189,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_gallery"
-            android:contentDescription="Gallery"
+            android:contentDescription="@string/gallery"
             android:padding="8dp" />
 
         <ImageView
@@ -202,7 +197,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_profile"
-            android:contentDescription="Profile"
+            android:contentDescription="@string/profile"
             android:padding="8dp" />
 
         <ImageView
@@ -210,8 +205,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_settings"
-            android:contentDescription="Settings"
+            android:contentDescription="@string/settings"
             android:padding="8dp" />
     </LinearLayout>
-
 </RelativeLayout>

@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,7 +8,9 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
+        android:gravity="center_horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
 
         <!-- Sign Up Header Image -->
         <ImageView
@@ -17,14 +18,15 @@
             android:layout_height="57dp"
             android:layout_marginTop="32dp"
             android:layout_marginBottom="32dp"
-            android:contentDescription="Sign Up"
+            android:contentDescription="@string/sign_up"
             android:src="@drawable/signup_text" />
 
+        <!-- Reusable EditText Group Template -->
         <!-- First Name -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="First Name"
+            android:text="@string/first_name"
             android:textColor="#FFFFFF"
             android:translationX="-133dp"
             android:translationY="-5dp"
@@ -33,10 +35,13 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@drawable/rounded_edittext"
-            android:hint="First name"
+            android:hint="@string/first_name_hint"
+            android:inputType="textPersonName"
+            android:autofillHints="givenName"
+            android:importantForAccessibility="no"
+            android:layout_marginBottom="16dp"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
-            android:layout_marginBottom="16dp"
             android:textColor="#000000"
             android:textColorHint="#99000000" />
 
@@ -44,7 +49,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Middle Name"
+            android:text="@string/middle_name"
             android:textColor="#FFFFFF"
             android:translationX="-126dp"
             android:translationY="-5dp"
@@ -53,10 +58,13 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@drawable/rounded_edittext"
-            android:hint="Middle name"
+            android:hint="@string/middle_name_hint"
+            android:inputType="textPersonName"
+            android:autofillHints="middleName"
+            android:importantForAccessibility="no"
+            android:layout_marginBottom="16dp"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
-            android:layout_marginBottom="16dp"
             android:textColor="#000000"
             android:textColorHint="#99000000" />
 
@@ -64,7 +72,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Last Name"
+            android:text="@string/last_name"
             android:translationX="-135dp"
             android:translationY="-5dp"
             android:textColor="#FFFFFF"
@@ -73,10 +81,13 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@drawable/rounded_edittext"
-            android:hint="Last name"
+            android:hint="@string/last_name_hint"
+            android:inputType="textPersonName"
+            android:autofillHints="familyName"
+            android:importantForAccessibility="no"
+            android:layout_marginBottom="16dp"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
-            android:layout_marginBottom="16dp"
             android:textColor="#000000"
             android:textColorHint="#99000000" />
 
@@ -84,7 +95,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email"
+            android:text="@string/email"
             android:translationX="-150dp"
             android:translationY="-5dp"
             android:textColor="#FFFFFF"
@@ -94,11 +105,13 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@drawable/rounded_edittext"
-            android:hint="Email"
+            android:hint="@string/email_hint"
             android:inputType="textEmailAddress"
+            android:autofillHints="emailAddress"
+            android:importantForAccessibility="no"
+            android:layout_marginBottom="16dp"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
-            android:layout_marginBottom="16dp"
             android:textColor="#000000"
             android:textColorHint="#99000000" />
 
@@ -106,7 +119,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Password"
+            android:text="@string/password"
             android:translationX="-135dp"
             android:translationY="-5dp"
             android:textColor="#FFFFFF"
@@ -116,11 +129,13 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@drawable/rounded_edittext"
-            android:hint="Password"
+            android:hint="@string/password_hint"
             android:inputType="textPassword"
+            android:autofillHints="password"
+            android:importantForAccessibility="no"
+            android:layout_marginBottom="16dp"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
-            android:layout_marginBottom="16dp"
             android:textColor="#000000"
             android:textColorHint="#99000000" />
 
@@ -130,7 +145,7 @@
             android:layout_height="wrap_content"
             android:translationX="-109dp"
             android:translationY="-5dp"
-            android:text="Confirm Password"
+            android:text="@string/confirm_password"
             android:textColor="#FFFFFF"
             android:textSize="14sp" />
         <EditText
@@ -138,8 +153,10 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@drawable/rounded_edittext"
-            android:hint="Confirm password"
+            android:hint="@string/confirm_password_hint"
             android:inputType="textPassword"
+            android:autofillHints="password"
+            android:importantForAccessibility="no"
             android:drawableEnd="@drawable/ic_visibility_off"
             android:drawablePadding="12dp"
             android:paddingStart="16dp"
@@ -153,7 +170,7 @@
             android:id="@+id/btnSignup"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="Sign Up"
+            android:text="@string/sign_up"
             android:background="@drawable/button_gradient"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
@@ -173,7 +190,7 @@
                 android:id="@+id/tvAlreadyHaveAccount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Already have an account?"
+                android:text="@string/already_have_account"
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
                 android:textStyle="italic" />
@@ -184,14 +201,15 @@
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"
                 android:minWidth="48dp"
-                android:text="Log in"
+                android:text="@string/log_in"
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:clickable="true"
                 android:focusable="true"
                 android:paddingStart="6dp"
-                android:gravity="center_vertical"  />
+                android:paddingEnd="6dp"
+                android:gravity="center_vertical" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

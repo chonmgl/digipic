@@ -17,8 +17,8 @@
         <ImageView
             android:layout_width="130dp"
             android:layout_height="153dp"
-            android:contentDescription="Logo"
             android:src="@drawable/digipic_logo"
+            android:contentDescription="@string/logo"
             android:translationX="-15dp"
             android:translationY="0dp" />
 
@@ -33,8 +33,8 @@
             android:layout_height="32dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:contentDescription="Notifications"
-            android:src="@drawable/ic_notif" />
+            android:src="@drawable/ic_notif"
+            android:contentDescription="@string/notifications" />
     </LinearLayout>
 
     <!-- Scrollable Content -->
@@ -63,7 +63,8 @@
                     android:layout_height="match_parent"
                     android:src="@drawable/ic_profile"
                     android:scaleType="centerCrop"
-                    android:background="@drawable/rounded_card" />
+                    android:background="@drawable/rounded_card"
+                    android:contentDescription="@string/profile_image" />
 
                 <ImageView
                     android:id="@+id/uploadButton"
@@ -74,14 +75,15 @@
                     android:layout_margin="4dp"
                     android:src="@drawable/ic_camera"
                     android:background="@drawable/circle_button_bg"
-                    android:padding="6dp" />
+                    android:padding="6dp"
+                    android:contentDescription="@string/upload_photo" />
             </RelativeLayout>
 
             <!-- Username -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Username"
+                android:text="@string/username"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="#000000"
@@ -106,7 +108,7 @@
                         android:id="@+id/postsCount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="15"
+                        android:text="@string/posts_count"
                         android:textStyle="bold"
                         android:textSize="18sp"
                         android:textColor="#6B0000" />
@@ -114,7 +116,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Posts"
+                        android:text="@string/posts"
                         android:textSize="14sp" />
                 </LinearLayout>
 
@@ -129,7 +131,7 @@
                         android:id="@+id/followersCount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="120"
+                        android:text="@string/followers_count"
                         android:textStyle="bold"
                         android:textSize="18sp"
                         android:textColor="#6B0000" />
@@ -137,7 +139,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Followers"
+                        android:text="@string/followers"
                         android:textSize="14sp" />
                 </LinearLayout>
 
@@ -152,7 +154,7 @@
                         android:id="@+id/followingCount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="80"
+                        android:text="@string/following_count"
                         android:textStyle="bold"
                         android:textSize="18sp"
                         android:textColor="#6B0000" />
@@ -160,7 +162,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Following"
+                        android:text="@string/following"
                         android:textSize="14sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -170,7 +172,7 @@
                 android:id="@+id/btnSharePhoto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Share a Photo"
+                android:text="@string/share_photo"
                 android:textColor="#FFFFFF"
                 android:backgroundTint="#6B0000"
                 android:layout_marginBottom="16dp"
@@ -180,7 +182,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Photos"
+                android:text="@string/photos"
                 android:textStyle="bold"
                 android:textSize="16sp"
                 android:textColor="#000000"
@@ -200,21 +202,24 @@
                     android:layout_height="100dp"
                     android:layout_columnWeight="1"
                     android:src="@drawable/photo_placeholder"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/photo" />
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="100dp"
                     android:layout_columnWeight="1"
                     android:src="@drawable/photo_placeholder"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/photo" />
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="100dp"
                     android:layout_columnWeight="1"
                     android:src="@drawable/photo_placeholder"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/photo" />
             </GridLayout>
 
             <!-- Preview Area -->
@@ -225,7 +230,8 @@
                 android:layout_marginTop="8dp"
                 android:scaleType="centerCrop"
                 android:visibility="gone"
-                android:background="@drawable/rounded_card" />
+                android:background="@drawable/rounded_card"
+                android:contentDescription="@string/photo_preview" />
         </LinearLayout>
     </ScrollView>
 
@@ -246,7 +252,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_home"
-            android:contentDescription="Home"
+            android:contentDescription="@string/home"
             android:padding="8dp" />
 
         <ImageView
@@ -254,7 +260,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_challenges"
-            android:contentDescription="Challenges"
+            android:contentDescription="@string/challenges"
             android:padding="8dp" />
 
         <ImageView
@@ -262,7 +268,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_gallery"
-            android:contentDescription="Gallery"
+            android:contentDescription="@string/gallery"
             android:padding="8dp" />
 
         <ImageView
@@ -270,7 +276,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_profile"
-            android:contentDescription="Profile"
+            android:contentDescription="@string/profile"
             android:padding="8dp" />
 
         <ImageView
@@ -278,7 +284,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_settings"
-            android:contentDescription="Settings"
+            android:contentDescription="@string/settings"
             android:padding="8dp" />
     </LinearLayout>
 </RelativeLayout>

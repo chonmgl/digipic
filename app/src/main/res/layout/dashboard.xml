@@ -4,54 +4,59 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
-    <!-- Top Header with Logo and Notification Icon -->
+    <!-- Top Header -->
     <LinearLayout
         android:id="@+id/topHeader"
         android:layout_width="match_parent"
         android:layout_height="93dp"
         android:background="@drawable/bg_gradient"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:orientation="horizontal">
 
         <ImageView
             android:layout_width="130dp"
             android:layout_height="153dp"
-            android:contentDescription="Logo"
             android:src="@drawable/digipic_logo"
+            android:contentDescription="@string/logo"
             android:translationX="-15dp"
             android:translationY="-45dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
 
         <ImageView
             android:id="@+id/notificationIcon"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:layout_alignParentEnd="true"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:contentDescription="Notifications"
+            android:contentDescription="@string/notifications"
             android:src="@drawable/ic_notif"
-            android:translationX="200dp"
             android:translationY="8dp" />
     </LinearLayout>
 
     <!-- Main Content -->
     <ScrollView
-        android:layout_below="@+id/topHeader"
-        android:layout_above="@+id/bottomNav"
+        android:layout_below="@id/topHeader"
+        android:layout_above="@id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="24dp">
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Welcome Text -->
+            <!-- Welcome -->
             <TextView
                 android:id="@+id/welcomeText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Welcome,"
+                android:text="@string/welcome"
                 android:textSize="18sp"
                 android:textColor="#000000" />
 
@@ -59,13 +64,13 @@
                 android:id="@+id/userNameText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="User Name"
+                android:text="@string/username"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:textColor="#A52A2A"
                 android:layout_marginBottom="16dp" />
 
-            <!-- Daily Task Section -->
+            <!-- Daily Task -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="190dp"
@@ -73,7 +78,8 @@
                 android:background="@drawable/rounded_card"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="16dp">
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
 
                 <ProgressBar
                     android:id="@+id/circularProgress"
@@ -90,12 +96,13 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
-                    android:paddingStart="16dp">
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Daily Task"
+                        android:text="@string/daily_task"
                         android:textColor="#000000"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -103,14 +110,14 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Complete 15 chapters"
+                        android:text="@string/complete_15_chapters"
                         android:textColor="#666666"
                         android:textSize="12sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="8 chapters to go..."
+                        android:text="@string/chapters_to_go"
                         android:textColor="#999999"
                         android:textSize="12sp" />
                 </LinearLayout>
@@ -120,7 +127,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Available Courses"
+                android:text="@string/available_courses"
                 android:textSize="18sp"
                 android:textColor="#000000"
                 android:textStyle="bold"
@@ -136,23 +143,23 @@
                     android:id="@+id/btnPhotography"
                     android:layout_width="0dp"
                     android:layout_height="150dp"
-                    android:layout_marginEnd="8dp"
                     android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
                     android:background="@android:color/transparent"
-                    android:contentDescription="Photography Card"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/cmr_tch3" />
+                    android:src="@drawable/cmr_tch3"
+                    android:contentDescription="@string/photography_card"
+                    android:scaleType="centerCrop" />
 
                 <ImageButton
                     android:id="@+id/btnChallenges"
                     android:layout_width="0dp"
                     android:layout_height="150dp"
-                    android:layout_marginStart="8dp"
                     android:layout_weight="1"
+                    android:layout_marginStart="8dp"
                     android:background="@android:color/transparent"
-                    android:contentDescription="Challenges Card"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/cmr_tch4" />
+                    android:src="@drawable/cmr_tch4"
+                    android:contentDescription="@string/challenges_card"
+                    android:scaleType="centerCrop" />
             </LinearLayout>
 
             <!-- Tip of the Day -->
@@ -167,7 +174,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tip of the Day:"
+                    android:text="@string/tip_of_day"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -175,7 +182,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+                    android:text="@string/tip_content"
                     android:textColor="#FFFFFF"
                     android:textSize="14sp"
                     android:layout_marginTop="4dp" />
@@ -183,7 +190,7 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- Bottom Navigation Bar -->
+    <!-- Bottom Navigation -->
     <LinearLayout
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
@@ -201,7 +208,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_home"
-            android:contentDescription="Home"
+            android:contentDescription="@string/home"
             android:padding="8dp" />
 
         <ImageView
@@ -209,7 +216,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_challenges"
-            android:contentDescription="Challenges"
+            android:contentDescription="@string/challenges"
             android:padding="8dp" />
 
         <ImageView
@@ -217,7 +224,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_gallery"
-            android:contentDescription="Gallery"
+            android:contentDescription="@string/gallery"
             android:padding="8dp" />
 
         <ImageView
@@ -225,7 +232,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_profile"
-            android:contentDescription="Profile"
+            android:contentDescription="@string/profile"
             android:padding="8dp" />
 
         <ImageView
@@ -233,7 +240,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:src="@drawable/ic_settings"
-            android:contentDescription="Settings"
+            android:contentDescription="@string/settings"
             android:padding="8dp" />
     </LinearLayout>
 </RelativeLayout>

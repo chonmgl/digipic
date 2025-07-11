@@ -75,15 +75,57 @@
     <string name="notifications">Notification</string>
     <string name="account">Account</string>
     <string name="report_bug">Report Bug</string>
-
     <string name="basic_photography">Basic Photography</string>
     <string name="illustrations">Illustrations</string>
     <string name="video">Video</string>
     <string name="previous">Previous</string>
-
     <string name="medium_shot">Medium Shot</string>
     <string name="high_angle_shot">High Angle Shot</string>
     <string name="high_angle_description">A shot taken from a high distance.</string>
+    <string name="welcome">Welcome,</string>
+    <string name="daily_task">Daily Task</string>
+    <string name="complete_15_chapters">Complete 15 chapters</string>
+    <string name="chapters_to_go">8 chapters to go</string>
+    <string name="available_courses">Available Courses</string>
+    <string name="photography_card">Photography Card</string>
+    <string name="challenges_card">Challenges Card</string>
+    <string name="tip_of_day">Tip of the Day:</string>
+    <string name="tip_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit</string>
+    <string name="my_course">My Course</string>
+    <string name="dropdown">Dropdown</string>
+    <string name="available">Available</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="completed">Completed</string>
+    <string name="empty_state">Empty State</string>
+    <string name="no_content_available">No Content Available</string>
+    <string name="nothing_here">Looks like theres nothing here yet.</string>
+    <string name="new_challenge">📷 New Challenge Available!</string>
+    <string name="challenge_description">Check out the latest photography challenge now.</string>
+    <string name="tip_title">📢 Tip of the Day!</string>
+    <string name="tip_description">Use natural lighting to enhance your subject features.</string>
+
+    <string name="profile_image">Profile Image</string>
+    <string name="upload_photo">Upload Photo</string>
+    <string name="posts">Posts</string>
+    <string name="posts_count">15</string>
+    <string name="followers">Followers</string>
+    <string name="followers_count">120</string>
+    <string name="following">Following</string>
+    <string name="following_count">80</string>
+    <string name="share_photo">Share a Photo</string>
+    <string name="photos">Photos</string>
+    <string name="photo">Photo</string>
+    <string name="photo_preview">Photo Preview</string>
+    <string name="core_one">Core One</string>
+
+    <string name="first_name_hint">First name</string>
+    <string name="middle_name_hint">Middle name</string>
+    <string name="last_name_hint">Last name</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="confirm_password_hint">Confirm password</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="log_in">Log in</string>
 
 
 
