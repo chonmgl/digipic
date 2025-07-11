@@ -137,6 +137,13 @@
     <string name="available_challenges">Available Challenges</string>
     <string name="sample_challenge">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
     <string name="camera_icon">Camera icon</string>
+    <string name="question_counter">Question 1 of 20</string>
+    <string name="angle_shot">Angle Shot</string>
+    <string name="long_shot">Long\nShot</string>
+    <string name="cowboy_shot">Cowboy\nShot</string>
+    <string name="overhead_shot">Overhead\nShot</string>
+    <string name="med_shot">Medium\nShot</string>
+
 
 
 </resources>
